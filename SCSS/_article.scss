@@ -1,0 +1,65 @@
+.article {
+    width: 80%;
+    margin: 0 auto 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    &__title {
+        background-color: $light-grey;
+        text-align: center;
+        padding: 20px;
+    }
+    &__h1 {
+        font-size: 22px;
+        color: $dark-grey;
+        letter-spacing: 1px;
+        @extend %half-margin-top,
+        %default-margin-bottom,
+        %no-margin-left,
+        %no-margin-right;
+    }
+    .breadcrumb {
+        @include flx(justify-content, center);
+        align-items: center;
+        &__link {
+            font-size: 12px;
+            @extend %no-decoration;
+            @include fontSize(12px);
+            color: $dark-grey;
+            &:hover {
+                @extend %u-decoration;
+                color: $purple;
+            }
+        }
+        &__img {
+            @extend %double-margin-bottom;
+        }
+    }
+    &__img {
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    &__details {
+        @include flx(justify-content, center);
+        align-items: center;
+    }
+    &__date {
+        @extend %no-margin-top,
+        %no-margin-bottom,
+        %default-margin-left,
+        %default-margin-right;
+        @include fontSize(12px);
+        font-style: italic;
+    }
+    &__tag {
+        font-size: 14px;
+        padding: 5px 7px;
+        color: $purple;
+        border: 1px solid $purple;
+        margin: 0 10px;
+    }
+    &__content {
+        font-weight: 100;
+        font-size: 14px;
+        color: $dark-grey;
+        padding: 10px 20px;
+    }
+}
